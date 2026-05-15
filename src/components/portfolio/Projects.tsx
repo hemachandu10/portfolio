@@ -13,7 +13,7 @@ const projects = [
     image: resumeImg,
     stack: ["React", "Node.js", "OpenAI", "Tailwind"],
     liveUrl: "https://resumeanalyser-ootk.onrender.com",
-    githubUrl: "https://github.com/bhemachandra1431/ai_resume_analyser",
+    githubUrl: "",
   },
   {
     title: "Healthy Meal Planner",
