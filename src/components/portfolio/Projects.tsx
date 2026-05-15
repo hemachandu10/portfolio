@@ -12,6 +12,8 @@ const projects = [
     desc: "Upload a resume, get an ATS score, and receive actionable AI-powered improvement suggestions through a modern dashboard.",
     image: resumeImg,
     stack: ["React", "Node.js", "OpenAI", "Tailwind"],
+    liveUrl: "https://resumeanalyser-ootk.onrender.com",
+    githubUrl: "https://github.com/bhemachandra1431/ai_resume_analyser",
   },
   {
     title: "Healthy Meal Planner",
@@ -19,6 +21,8 @@ const projects = [
     desc: "Personalized meal plans with macro-based recommendations, food delivery integration, and a subscription model.",
     image: mealImg,
     stack: ["React", "Express", "MongoDB", "Stripe"],
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     title: "Full Stack Task Manager",
@@ -26,6 +30,8 @@ const projects = [
     desc: "End-to-end task manager with authentication, CRUD, real-time updates, and a polished dashboard UI.",
     image: tasksImg,
     stack: ["React", "Node.js", "MongoDB", "Socket.io"],
+    liveUrl: "",
+    githubUrl: "",
   },
 ];
 
