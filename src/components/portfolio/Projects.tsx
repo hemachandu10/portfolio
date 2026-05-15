@@ -73,12 +73,37 @@ export function Projects() {
               <div className="flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl font-bold">{p.title}</h3>
                 <div className="flex gap-2">
-                  <button className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10" aria-label="GitHub">
-                    <Github className="h-4 w-4" />
-                  </button>
-                  <button className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110" style={{ background: "var(--gradient-primary)" }} aria-label="Live">
-                    <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
-                  </button>
+                  {p.githubUrl ? (
+                    <a
+                      href={p.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10"
+                      aria-label="GitHub"
+                    >
+                      <Github className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <button className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10" aria-label="GitHub">
+                      <Github className="h-4 w-4" />
+                    </button>
+                  )}
+                  {p.liveUrl ? (
+                    <a
+                      href={p.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110"
+                      style={{ background: "var(--gradient-primary)" }}
+                      aria-label="Live"
+                    >
+                      <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
+                    </a>
+                  ) : (
+                    <button className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110" style={{ background: "var(--gradient-primary)" }} aria-label="Live">
+                      <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
+                    </button>
+                  )}
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">{p.desc}</p>
