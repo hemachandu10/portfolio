@@ -94,7 +94,9 @@ export function Hero() {
             </a>
             <a
               href="/resume.pdf"
-              download
+              download="Hema_Chandu_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground hover:border-primary/50"
             >
               <Download className="h-4 w-4" /> Resume
