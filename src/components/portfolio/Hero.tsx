@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
+import resumePdf from "@/assets/resume.pdf?url";
 
 const roles = ["Full Stack Developer", "Problem Solver", "CSE Engineer", "Competitive Coder"];
 
@@ -42,7 +43,7 @@ export function Hero() {
   };
 
   const openResume = () => {
-    window.location.href = "/resume.pdf";
+    window.location.assign(resumePdf);
   };
 
   return (
