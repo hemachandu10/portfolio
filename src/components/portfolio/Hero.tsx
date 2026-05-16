@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
-import { useEffect, useState } from "react";
+import { type MouseEvent, useEffect, useState } from "react";
 import resumePdf from "@/assets/resume.pdf?url";
 
 const roles = ["Full Stack Developer", "Problem Solver", "CSE Engineer", "Competitive Coder"];
@@ -42,7 +42,7 @@ export function Hero() {
     window.history.replaceState(null, "", `#${id}`);
   };
 
-  const openResume = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const openResume = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     window.location.href = resumePdf;
   };
