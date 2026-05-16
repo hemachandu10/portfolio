@@ -36,16 +36,6 @@ function Typewriter() {
 }
 
 export function Hero() {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", "#projects");
-  };
-
-  const openResume = () => {
-    const resumeUrl = `${window.location.origin}/resume.pdf`;
-    window.open(resumeUrl, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="home" className="relative isolate overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
