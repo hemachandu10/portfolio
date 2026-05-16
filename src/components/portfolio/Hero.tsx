@@ -42,8 +42,9 @@ export function Hero() {
     window.history.replaceState(null, "", `#${id}`);
   };
 
-  const openResume = () => {
-    window.location.assign(resumePdf);
+  const openResume = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.location.href = resumePdf;
   };
 
   return (
@@ -104,14 +105,13 @@ export function Hero() {
             >
               <Mail className="h-4 w-4" /> Contact Me
             </a>
-            <button
-              type="button"
-              onPointerDownCapture={openResume}
+            <a
+              href={resumePdf}
               onClick={openResume}
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground hover:border-primary/50"
             >
               <Download className="h-4 w-4" /> Resume
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
