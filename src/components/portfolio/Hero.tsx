@@ -36,16 +36,6 @@ function Typewriter() {
 }
 
 export function Hero() {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", "#projects");
-  };
-
-  const openResume = () => {
-    const resumeUrl = `${window.location.origin}/resume.pdf`;
-    window.open(resumeUrl, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="home" className="relative isolate overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
@@ -88,28 +78,29 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
-            <button
-              type="button"
-              onClick={scrollToProjects}
+            <a
+              href="#projects"
               className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 glow-cyan"
               style={{ background: "var(--gradient-primary)" }}
             >
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:bg-white/10"
             >
               <Mail className="h-4 w-4" /> Contact Me
             </a>
-            <button
-              type="button"
-              onClick={openResume}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Hema_Chandu_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground hover:border-primary/50"
             >
               <Download className="h-4 w-4" /> Resume
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
