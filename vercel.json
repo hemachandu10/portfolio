@@ -1,7 +1,7 @@
 {
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
-  "framework": "vite",
+  "framework": "null",
   "nodeVersion": "20.x",
   "env": {
     "NODE_ENV": "production"
