@@ -11,7 +11,7 @@ const projects = [
     tag: "AI · Full Stack",
     desc: "Upload a resume, get an ATS score, and receive actionable AI-powered improvement suggestions through a modern dashboard.",
     image: resumeImg,
-    stack: ["Node.js", "Groq api",],
+    stack: ["Node.js", "Groq api"],
     github: "https://github.com/hemachandu10/resumeAnalyser",
     live: "https://resumeanalyser-ootk.onrender.com/",
   },
@@ -19,7 +19,7 @@ const projects = [
     title: "airbnb basic clone",
     tag: "Mongobd CRUD Operations",
     desc: "Here we read,add,edit,delete villa houses stay information",
-    image: staynest ,
+    image: staynest,
     stack: ["Nodejs", "Express", "MongoDB", "Ejs"],
     github: "https://github.com/hemachandu10/stayNest",
     live: "https://staynest-2-4vgi.onrender.com",
@@ -73,28 +73,26 @@ export function Projects() {
               <div className="flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl font-bold">{p.title}</h3>
                 <div className="flex gap-2">
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
-
-                <a
-                  href={p.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110"
-                  style={{ background: "var(--gradient-primary)" }}
-                  aria-label="Live"
-                >
-                  <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
-                </a>
-              </div>
-                
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110"
+                    style={{ background: "var(--gradient-primary)" }}
+                    aria-label="Live"
+                  >
+                    <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
+                  </a>
+                </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">{p.desc}</p>
               <div className="mt-5 flex flex-wrap gap-2">
