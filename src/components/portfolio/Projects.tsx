@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import { Section } from "./Section";
-import resumeImg from "@/assets/project-resume.jpg";
-import mealImg from "@/assets/project-meal.jpg";
-import tasksImg from "@/assets/project-tasks.jpg";
+import resumeImg from "@/assets/resumeAnalyser.png";
+import staynest from "@/assets/staynext.png";
+import currencyConverter from "@/assets/currencyConverter.png";
 
 const projects = [
   {
@@ -11,21 +11,27 @@ const projects = [
     tag: "AI · Full Stack",
     desc: "Upload a resume, get an ATS score, and receive actionable AI-powered improvement suggestions through a modern dashboard.",
     image: resumeImg,
-    stack: ["React", "Node.js", "OpenAI", "Tailwind"],
+    stack: ["Node.js", "Groq api",],
+    github: "https://github.com/hemachandu10/resumeAnalyser",
+    live: "https://resumeanalyser-ootk.onrender.com/",
   },
   {
-    title: "Healthy Meal Planner",
-    tag: "SaaS · Health",
-    desc: "Personalized meal plans with macro-based recommendations, food delivery integration, and a subscription model.",
-    image: mealImg,
-    stack: ["React", "Express", "MongoDB", "Stripe"],
+    title: "airbnb basic clone",
+    tag: "Mongobd CRUD Operations",
+    desc: "Here we read,add,edit,delete villa houses stay information",
+    image: staynest ,
+    stack: ["Nodejs", "Express", "MongoDB", "Ejs"],
+    github: "https://github.com/hemachandu10/stayNest",
+    live: "https://staynest-2-4vgi.onrender.com",
   },
   {
-    title: "Full Stack Task Manager",
-    tag: "Productivity",
-    desc: "End-to-end task manager with authentication, CRUD, real-time updates, and a polished dashboard UI.",
-    image: tasksImg,
-    stack: ["React", "Node.js", "MongoDB", "Socket.io"],
+    title: "Currency Converter",
+    tag: "API Fetch",
+    desc: "Real-time currency conversion",
+    image: currencyConverter,
+    stack: ["JavaScript", "CSS", "Html", "Fetch api"],
+    github: "https://github.com/hemachandu10/currency-converter",
+    live: "https://currency-converter-topaz-eight.vercel.app/",
   },
 ];
 
@@ -67,13 +73,28 @@ export function Projects() {
               <div className="flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl font-bold">{p.title}</h3>
                 <div className="flex gap-2">
-                  <button className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10" aria-label="GitHub">
-                    <Github className="h-4 w-4" />
-                  </button>
-                  <button className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110" style={{ background: "var(--gradient-primary)" }} aria-label="Live">
-                    <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
-                  </button>
-                </div>
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid h-9 w-9 place-items-center rounded-full glass transition-colors hover:bg-white/10"
+                  aria-label="GitHub"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+
+                <a
+                  href={p.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110"
+                  style={{ background: "var(--gradient-primary)" }}
+                  aria-label="Live"
+                >
+                  <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
+                </a>
+              </div>
+                
               </div>
               <p className="mt-3 text-sm text-muted-foreground">{p.desc}</p>
               <div className="mt-5 flex flex-wrap gap-2">

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 
 const roles = ["Full Stack Developer", "Problem Solver", "CSE Engineer", "Competitive Coder"];
 
@@ -77,15 +78,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
-          >
-            <a
-              href="#projects"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 glow-cyan"
-              style={{ background: "var(--gradient-primary)" }}
-            >
-              View Projects
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+          > 
+          
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:bg-white/10"
@@ -93,11 +87,13 @@ export function Hero() {
               <Mail className="h-4 w-4" /> Contact Me
             </a>
             <a
-              href="/resume.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground hover:border-primary/50"
+              href="/Hema_chandu_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-50 inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground hover:border-primary/50"
             >
-              <Download className="h-4 w-4" /> Resume
+              <Download className="h-4 w-4" />
+              Resume
             </a>
           </motion.div>
 

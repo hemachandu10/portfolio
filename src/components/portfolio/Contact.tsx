@@ -45,7 +45,7 @@ export function Contact() {
           className="md:col-span-2 space-y-4"
         >
           {[
-            { icon: Mail, label: "Email", value: "hemachandu10@gmail.com", href: "mailto:hemachandu10@gmail.com" },
+            { icon: Mail, label: "Email", value: "bhemachandu10@gmail.com", href: "mailto:bhemachandu10@gmail.com" },
             { icon: Linkedin, label: "LinkedIn", value: "Bandaru Hema Chandu", href: "https://www.linkedin.com/in/bandaru-hema-chandu-5baa612b6/" },
             { icon: Github, label: "GitHub", value: "@hemachandu10", href: "https://github.com/hemachandu10" },
           ].map((c) => (

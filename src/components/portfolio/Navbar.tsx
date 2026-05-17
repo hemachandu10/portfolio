@@ -34,7 +34,7 @@ export function Navbar() {
             <span className="gradient-text font-mono text-sm">HC</span>
           </span>
           <span className="hidden sm:inline">
-            Hema<span className="gradient-text">.</span>
+            Hema Chandu<span className="gradient-text">.</span>
           </span>
         </a>
 
